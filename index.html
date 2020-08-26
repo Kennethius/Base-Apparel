@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- displays site properly based on user's device -->
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
     <!--- font -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -29,43 +27,34 @@
     </style>
 </head>
 
-<body>
-    <div class='container-fluid'>
-        <div class='row'>
-            <div class='col'>
-                <img src="images/logo.svg" class='logo' alt="logo">
-                <div class='inner'>
-                    <h1 class='header'><span class='heading-text'>WE'RE</span> COMING SOON</h1>
-                    <p class='heading-text'>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals</p>
-                </div>
-                <div class='form-container'>
-                    <form class="row position-relative flex-column needs-validation " novalidate>
-                        <div class='row'>
-                            <input type="email" name="email" placeholder="Email Address" class="email email-input white col-7 col-md-4 col-lg-7 ml-3 form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-                            <div class="valid-feedback feedback-pos">
-                                Looks good!
-                            </div>
-                            <button type="submit" class="btn submit-button text-uppercase sbmt-btn col-3 col-md-2 col-lg-4 ml-1" value="validate">Submit</button>
-                            <div class="invalid-feedback feedback-pos">
-                                <p></p>Please input valid email ID
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class='col background'>
+<body onload='document.form1.text1.focus()'>
+    <div class='container'>
+        <div class='logo-column'>
+            <img src="images/logo.svg" class='logo' alt="logo">
+        </div>
 
+        <div class='right-column'>
+
+        </div>
+
+        <div class='left-column'>
+            <div class='inner'>
+                <h1 class='header'><span class='heading-text'>WE'RE</span> COMING SOON</h1>
+                <p class='heading-text'>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals</p>
             </div>
+
+            <div class="mail">
+                <form name="form1" action="#">
+                    <input type='text' class='email-input' name='text1' placeholder="Email Address"></input>
+                    <button type="submit" class='button' name="submit" onclick="ValidateEmail(document.form1.text1)"><img src="images/icon-arrow.svg" alt=""></button>
+                </form>
+            </div>
+            <p class='error-text'>Please provide a valid email</p>
+            <p class='thank-you'>Thank you</p>
         </div>
     </div>
 
-
-
     <script src="js/index.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 
 </html>
